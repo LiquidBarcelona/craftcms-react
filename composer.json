@@ -1,13 +1,12 @@
 {
     "name": "liquidbcn/craftcms-react",
     "description": "Client and Server-side React rendering for Craft CMS",
-    "version": "1.0.0",
     "type": "craft-plugin",
     "keywords": ["react", "twig", "craft"],
     "require": {
-      "craftcms/cms": "4.8.4",
+      "craftcms/cms": "^4",
       "limenius/react-renderer": "^5.0.4",
-      "twig/twig": "v3.8.0"
+      "twig/twig": "^3.8"
     },
     "autoload": {
       "psr-4": {
@@ -17,7 +16,7 @@
     "license": "MIT",
     "extra": {
       "handle": "react-in-craft",
-      "name": "React for Craft",
+      "name": "React for Craft"
     },
     "config": {
         "allow-plugins": {
