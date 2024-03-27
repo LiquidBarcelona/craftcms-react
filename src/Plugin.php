@@ -2,7 +2,7 @@
 namespace react;
 
 use Craft;
-use craft\web\twig\variables\CraftVariable;
+use craft\base\Plugin as BasePlugin;
 use yii\base\Event;
 
 use Limenius\ReactRenderer\Renderer\PhpExecJsReactRenderer;
@@ -12,14 +12,14 @@ use react\context\CraftContextProvider;
 use react\twig\SerializerExtension;
 use react\models\Settings;
 
-class Plugin extends \craft\base\Plugin
+class Plugin extends BasePlugin
 {
     public $hasCpSettings = true;
 
     public function init()
     {
         parent::init();
-        
+
         if (Craft::$app->request->getIsSiteRequest()) {
             $env = $this->getSettings()->env;
             $serverBundle = CRAFT_BASE_PATH.DIRECTORY_SEPARATOR.$this->getSettings()->serverBundle;
