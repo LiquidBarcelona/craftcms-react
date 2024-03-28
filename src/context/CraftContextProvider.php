@@ -8,13 +8,12 @@ class CraftContextProvider implements ContextProviderInterface{
     
     private $request;
 
-    public function __construct($request){
+    public function __construct($request) {
         $this->request = $request;
 
     }
 
-    public function getContext($serverSide)
-    {
+    public function getContext($serverSide) {
         return [
             'serverSide' => $serverSide,
             'href' => $this->request->getAbsoluteUrl(),

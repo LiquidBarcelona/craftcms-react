@@ -8,8 +8,7 @@ class SerializerExtension extends \Twig_Extension
     private $serializer;
     private $cache = [];
 
-    public function getFunctions()
-    {
+    public function getFunctions() {
         return array(
             new \Twig_Function('serialize', array($this, 'serialize')),
         );
