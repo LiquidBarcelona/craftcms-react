@@ -1,27 +1,49 @@
 {
     "name": "liquidbcn/craftcms-react",
-    "description": "Client and Server-side React rendering for Craft CMS",
+    "description": "React for Craft",
     "type": "craft-plugin",
-    "keywords": ["react", "twig", "craft"],
+    "license": "mit",
+    "support": {
+        "email": "mbernet@liquid.cat",
+        "issues": "https://github.com/liquidbarcelona/craftcms-react/issues?state=open",
+        "source": "https://github.com/liquidbarcelona/craftcms-react",
+        "docs": "https://github.com/liquidbarcelona/craftcms-react",
+        "rss": "https://github.com/liquidbarcelona/craftcms-react/releases.atom"
+    },
     "require": {
-      "craftcms/cms": "^4",
-      "limenius/react-renderer": "^5.0.4",
-      "twig/twig": "^3.8"
+        "php": ">=8.0.2",
+        "craftcms/cms": "^4",
+        "limenius/react-renderer": "^5.0.4",
+        "twig/twig": "^3.8"
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main"
     },
     "autoload": {
-      "psr-4": {
-        "react\\": "src/"
-      }
+        "psr-4": {
+            "liquidbcn\\craftcmsreact\\": "src/"
+        }
     },
-    "license": "MIT",
     "extra": {
-      "handle": "react-in-craft",
-      "name": "React for Craft"
+        "handle": "craftcms-react",
+        "name": "React for Craft",
+        "developer": "liquidbcn",
+        "documentationUrl": "https://github.com/liquidbarcelona/craftcms-react"
+    },
+    "scripts": {
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --ansi --fix",
+        "phpstan": "phpstan --memory-limit=1G"
     },
     "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.2"
+        },
         "allow-plugins": {
             "yiisoft/yii2-composer": true,
             "craftcms/plugin-installer": true
         }
     }
 }
+

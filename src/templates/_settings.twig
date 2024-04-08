@@ -1,0 +1,18 @@
+{# @var plugin \liquidbcn\craftcmsreact\Plugin #}
+{# @var settings \liquidbcn\craftcmsreact\models\Settings #}
+
+{% import '_includes/forms.twig' as forms %}
+
+{{ forms.selectField({
+    first: true,
+    label: "Rendering",
+    name: 'env',
+    options: [{value:'server_side', label:'Server Side'},{value:'client_side', label:'Client Side'},{value:'both', label:'Both'}],
+    value: settings.env
+}) }}
+
+{{ forms.textField({
+    label: "Server Bundle Location",
+    name: 'serverBundle',
+    value: settings.serverBundle
+}) }}

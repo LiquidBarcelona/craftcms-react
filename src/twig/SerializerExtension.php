@@ -1,16 +1,17 @@
 <?php
 
-namespace react\twig;
+namespace liquidbcn\craftcmsreact\twig;
+
 use Craft;
 
-class SerializerExtension extends \Twig_Extension
+class SerializerExtension extends \Twig\Extension\AbstractExtension
 {
     private $serializer;
     private $cache = [];
 
     public function getFunctions() {
         return array(
-            new \Twig_Function('serialize', array($this, 'serialize')),
+            new \Twig\TwigFunction('serialize', array($this, 'serialize')),
         );
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace react\context;
+namespace liquidbcn\craftcmsreact\context;
 
 use Limenius\ReactRenderer\Context\ContextProviderInterface;
 

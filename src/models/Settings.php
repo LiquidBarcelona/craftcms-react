@@ -1,9 +1,15 @@
 <?php
-namespace react\models;
 
+namespace liquidbcn\craftcmsreact\models;
+
+use Craft;
 use craft\base\Model;
 
-class Settings extends Model {
+/**
+ * craftcms-react settings
+ */
+class Settings extends Model
+{
 
     public $env = 'client_side';
     public $serverBundle = 'app/server-bundle.js';
@@ -13,4 +19,5 @@ class Settings extends Model {
             [['env', 'serverBundle'], 'required'],
         ];
     }
+
 }
